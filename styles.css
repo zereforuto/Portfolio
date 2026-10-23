@@ -509,6 +509,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .skill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   padding: 5px 10px;
   border: 1px solid #2a2a2a;
   border-radius: var(--radius);
@@ -520,6 +523,26 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .skill-tag:hover { border-color: #555; color: var(--color-white); }
+
+/* Devicon glyph sizing */
+.skill-tag i[class^="devicon-"],
+.skill-tag i[class*=" devicon-"] {
+  font-size: 15px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* Monochrome icons (GitHub, Next.js) — force white on dark bg */
+.skill-tag .devicon-github-original,
+.skill-tag .devicon-nextjs-plain {
+  color: #d0d0d0 !important;
+}
+
+/* Inline SVG fallback icons */
+.skill-tag svg {
+  flex-shrink: 0;
+  color: #888;
+}
 
 @media (max-width: 768px) {
   .skills-grid { grid-template-columns: 1fr; gap: var(--sp-5); }
