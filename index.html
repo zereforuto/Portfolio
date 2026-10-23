@@ -58,8 +58,8 @@
         <!-- Desktop links -->
         <ul class="nav-links" role="list">
           <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#next-laps">Roadmap</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -77,8 +77,8 @@
       <!-- Mobile menu -->
       <ul id="nav-mobile" class="nav-mobile" role="list">
         <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#next-laps">Roadmap</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -250,7 +250,40 @@
     </section>
 
     <!-- ======================================================
-         3. SKILLS — absolute black
+         3. PROJECTS — pure white
+    ====================================================== -->
+    <section id="projects" aria-labelledby="projects-title" class="section-pad">
+      <div class="container">
+
+        <div class="section-eyebrow section-eyebrow--light" aria-hidden="true">
+          <span class="label">Projects</span>
+          <div class="eyebrow-line"></div>
+        </div>
+
+        <div class="projects-header">
+          <h2 id="projects-title" class="section-title">
+            Featured work &amp; solutions.
+          </h2>
+          <a href="https://github.com/zereforuto?tab=repositories"
+             class="btn btn--primary"
+             target="_blank"
+             rel="noopener noreferrer"
+             id="all-repos-link"
+             aria-label="View all repositories on GitHub (opens in new tab)">
+            All repositories →
+          </a>
+        </div>
+
+        <!-- Cards injected by JS -->
+        <div id="projects-grid" class="projects-grid" aria-live="polite" aria-label="GitHub repositories">
+          <!-- Loading state rendered by JS -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================
+         4. SKILLS — absolute black
     ====================================================== -->
     <section id="skills" aria-labelledby="skills-title" class="section-pad">
       <div class="container">
@@ -386,39 +419,6 @@
     </section>
 
     <!-- ======================================================
-         4. PROJECTS — pure white
-    ====================================================== -->
-    <section id="projects" aria-labelledby="projects-title" class="section-pad">
-      <div class="container">
-
-        <div class="section-eyebrow section-eyebrow--light" aria-hidden="true">
-          <span class="label">Projects</span>
-          <div class="eyebrow-line"></div>
-        </div>
-
-        <div class="projects-header">
-          <h2 id="projects-title" class="section-title">
-            Recent work on GitHub.
-          </h2>
-          <a href="https://github.com/zereforuto?tab=repositories"
-             class="btn btn--primary"
-             target="_blank"
-             rel="noopener noreferrer"
-             id="all-repos-link"
-             aria-label="View all repositories on GitHub (opens in new tab)">
-            All repositories →
-          </a>
-        </div>
-
-        <!-- Cards injected by JS -->
-        <div id="projects-grid" class="projects-grid" aria-live="polite" aria-label="GitHub repositories">
-          <!-- Loading state rendered by JS -->
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ======================================================
          5. NEXT LAPS — absolute black, yellow accent
     ====================================================== -->
     <section id="next-laps" aria-labelledby="roadmap-title" class="section-pad">
@@ -525,8 +525,8 @@
               <nav aria-label="Footer navigation">
                 <ul class="nav-links-footer" role="list">
                   <li><a href="#about">About</a></li>
-                  <li><a href="#skills">Skills</a></li>
                   <li><a href="#projects">Projects</a></li>
+                  <li><a href="#skills">Skills</a></li>
                   <li><a href="#next-laps">Roadmap</a></li>
                   <li>
                     <a href="https://github.com/zereforuto"

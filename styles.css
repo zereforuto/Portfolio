@@ -582,31 +582,56 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   position: relative;
 }
 
-.project-card:hover { border-color: var(--color-text-dark); }
+.project-card:hover {
+  border-color: var(--color-text-dark);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.project-tagline {
+  display: block;
+  font-size: 10px;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--color-red);
+  margin-bottom: 2px;
+}
 
 .project-card-top {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: var(--sp-2);
 }
 
 .project-name {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: var(--fw-semibold);
   color: var(--color-text-dark);
   line-height: 1.3;
 }
 
-.project-link-icon {
+.project-link-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius);
   color: var(--color-text-tertiary);
+  transition: color var(--transition-fast), background var(--transition-fast);
   flex-shrink: 0;
-  transition: color var(--transition-fast);
-  width: 20px;
-  height: 20px;
 }
 
-.project-card:hover .project-link-icon { color: var(--color-text-dark); }
+.project-link-btn:hover {
+  color: var(--color-text-dark);
+  background: var(--color-gray-100);
+}
+
+.project-link-icon {
+  width: 18px;
+  height: 18px;
+}
 
 .project-desc {
   font-size: 13px;
@@ -639,19 +664,35 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   flex-shrink: 0;
 }
 
+.project-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  font-weight: var(--fw-medium);
+}
+
+.project-stat svg {
+  color: var(--color-yellow);
+}
+
 /* Language colors */
-.lang-dot[data-lang="JavaScript"]  { background: #f1e05a; }
-.lang-dot[data-lang="TypeScript"]  { background: #3178c6; }
-.lang-dot[data-lang="Python"]      { background: #3572A5; }
-.lang-dot[data-lang="HTML"]        { background: #e34c26; }
-.lang-dot[data-lang="CSS"]         { background: #563d7c; }
-.lang-dot[data-lang="Dart"]        { background: #00B4AB; }
-.lang-dot[data-lang="Java"]        { background: #b07219; }
-.lang-dot[data-lang="C++"]         { background: #f34b7d; }
-.lang-dot[data-lang="PHP"]         { background: #4F5D95; }
-.lang-dot[data-lang="Shell"]       { background: #89e051; }
+.lang-dot[data-lang="JavaScript"]          { background: #f1e05a; }
+.lang-dot[data-lang="TypeScript"]          { background: #3178c6; }
+.lang-dot[data-lang="Electron / TypeScript"]{ background: #2f74c0; }
+.lang-dot[data-lang="Python"]              { background: #3572A5; }
+.lang-dot[data-lang="Python / Flask"]      { background: #3572A5; }
+.lang-dot[data-lang="Next.js / Python"]    { background: #e34c26; }
+.lang-dot[data-lang="HTML"]                { background: #e34c26; }
+.lang-dot[data-lang="CSS"]                 { background: #563d7c; }
+.lang-dot[data-lang="Dart"]                { background: #00B4AB; }
+.lang-dot[data-lang="Java"]                { background: #b07219; }
+.lang-dot[data-lang="C++"]                 { background: #f34b7d; }
+.lang-dot[data-lang="PHP"]                 { background: #4F5D95; }
+.lang-dot[data-lang="Shell"]               { background: #89e051; }
 .lang-dot[data-lang="null"],
-.lang-dot[data-lang=""]            { background: #ccc; }
+.lang-dot[data-lang=""]                    { background: #ccc; }
 
 /* States */
 .projects-state {
