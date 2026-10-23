@@ -749,8 +749,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .contact-top {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
-  gap: var(--sp-8);
+  grid-template-columns: 1.5fr 0.8fr 1fr 1fr;
+  gap: var(--sp-6) var(--sp-5);
   padding-bottom: var(--sp-8);
   border-bottom: 1px solid #404040;
   margin-bottom: var(--sp-6);
@@ -830,7 +830,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   filter: brightness(0.7);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
+  .contact-top { grid-template-columns: 1fr 1fr; gap: var(--sp-5); }
+}
+
+@media (max-width: 600px) {
   .contact-top { grid-template-columns: 1fr; gap: var(--sp-5); }
 }
 
