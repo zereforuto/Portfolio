@@ -68,35 +68,35 @@
 
   const API_URL = 'https://api.github.com/users/zereforuto/repos?per_page=100&sort=updated&type=owner';
 
-  // Projects that directly solve real-world problems (higher weight / featured order)
+  // Featured applications (highest priority showcase)
   const FEATURED_PROJECTS = [
     {
       name: 'Stockpoint',
-      tagline: 'Problem Solver · Retail & POS',
+      tagline: 'Retail & POS',
       fallbackDesc: 'Offline-first desktop POS & inventory system for retail shops and groceries, featuring barcode scanning, sales audit trails, and local SQLite data management.',
       lang: 'Electron / TypeScript'
     },
     {
       name: 'VisuaLive',
-      tagline: 'Problem Solver · AI / Biometrics',
+      tagline: 'AI & Biometrics',
       fallbackDesc: 'Local-first, GPU-accelerated face detection and recognition system via WebSocket, ONNX Runtime (SCRFD/ArcFace), and SQL Server dataset management.',
       lang: 'Python'
     },
     {
       name: 'SigniaMAXX',
-      tagline: 'Problem Solver · Accessibility',
+      tagline: 'Accessibility & AI',
       fallbackDesc: 'Real-time American Sign Language (ASL) fingerspelling recognizer converting webcam hand signs (A–Z, 0–9) into live text using deep learning.',
       lang: 'Next.js / Python'
     },
     {
       name: 'FocusBoard',
-      tagline: 'Productivity Tool',
+      tagline: 'Productivity',
       fallbackDesc: 'Minimalist, high-performance personal productivity dashboard with task prioritization, smart filters, live search, and zero-config deployment.',
       lang: 'TypeScript'
     },
     {
       name: 'Recognizant',
-      tagline: 'Problem Solver · Computer Vision',
+      tagline: 'Computer Vision',
       fallbackDesc: 'Fully offline computer vision suite for facial biometric login, color/shape similar-image search, and automatic image analysis without external APIs.',
       lang: 'Python'
     },
@@ -175,10 +175,10 @@
       score += 1;
     }
 
-    // Require a qualifying score threshold to be categorized as a Problem Solver
+    // Require a qualifying score threshold to be categorized as a featured project
     if (score >= 3) {
       // Generate clean contextual category from matched reasons
-      const primaryReason = matchedReasons[0] || 'Software Solution';
+      const primaryReason = matchedReasons[0] || 'Software';
       const formattedReason = primaryReason
         .split('-')
         .map(w => w.charAt(0).toUpperCase() + w.slice(1))
@@ -186,7 +186,7 @@
 
       return {
         isProblemSolver: true,
-        tagline: `Problem Solver · ${formattedReason}`,
+        tagline: formattedReason,
         score: score
       };
     }
